@@ -53,7 +53,7 @@ function formatBasinn(info) {
 function SkillNameCell(props) {
 	return (
 		<div class="chartSkillName">
-			<img src={`/uma-tools/icons/${skillmeta(props.id).iconId}.png`} />
+			<img src={`/assets/${skillmeta(props.id).iconId}.png`} />
 			<span><Text id={`skillnames.${props.id}`} /></span>
 		</div>
 	);

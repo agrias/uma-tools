@@ -108,7 +108,7 @@ function TimeOfDaySelect(props) {
 	return (
 		<div class="timeofdaySelect" onClick={click}>
 			{Array(3).fill(0).map((_,i) =>
-				<img src={`/uma-tools/icons/utx_ico_timezone_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.time[i+2]}
+				<img src={`/assets/utx_ico_timezone_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.time[i+2]}
 					class={i+2 == props.value ? 'selected' : ''} data-timeofday={i+2} />)}
 		</div>
 	);
@@ -144,7 +144,7 @@ function WeatherSelect(props) {
 	return (
 		<div class="weatherSelect" onClick={click}>
 			{Array(4).fill(0).map((_,i) =>
-				<img src={`/uma-tools/icons/utx_ico_weather_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.weather[i+1]}
+				<img src={`/assets/utx_ico_weather_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.weather[i+1]}
 					class={i+1 == props.value ? 'selected' : ''} data-weather={i+1} />)}
 		</div>
 	);
@@ -159,7 +159,7 @@ function SeasonSelect(props) {
 	return (
 		<div class="seasonSelect" onClick={click}>
 			{Array(4 + +!CC_GLOBAL /* global doenst have late spring for some reason */).fill(0).map((_,i) =>
-				<img src={`/uma-tools/icons${CC_GLOBAL?'/global':''}/utx_txt_season_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.season[i+1]}
+				<img src={`/assets${CC_GLOBAL?'/global':''}/utx_txt_season_0${i}.png`} title={SKILL_STRINGS_en.skilldetails.season[i+1]}
 					class={i+1 == props.value ? 'selected' : ''} data-season={i+1} />)}
 		</div>
 	);
