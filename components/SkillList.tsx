@@ -12,7 +12,7 @@ import { Tooltip } from './Tooltip';
 import './SkillList.css';
 
 import skills from '../uma-skill-tools/data/skill_data.json';
-import skillnames from '../uma-skill-tools/data/skillnames.json';
+import skillnames from '../umalator-global/skillnames.json';
 import skill_meta from '../skill_meta.json';
 
 function skilldata(id: string) {

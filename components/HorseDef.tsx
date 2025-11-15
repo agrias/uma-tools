@@ -14,6 +14,7 @@ import './HorseDef.css';
 import umas from '../umas.json';
 import icons from '../icons.json';
 import skills from '../uma-skill-tools/data/skill_data.json';
+import skillnames from '../umalator-global/skillnames.json';
 
 function skilldata(id: string) {
 	return skills[id.split('-')[0]];
@@ -205,8 +206,14 @@ export function StrategySelect(props) {
 		</select>
 	);
 }
+const filteredSkillData: any = {};
+for (const key in skills) {
+  if (skillnames.hasOwnProperty(key)) {
+    filteredSkillData[key] = skills[key];
+  }
+}
 
-const nonUniqueSkills = Object.keys(skills).filter(id => skilldata(id).rarity < 3 || skilldata(id).rarity > 5);
+const nonUniqueSkills = Object.keys(filteredSkillData).filter(id => skilldata(id).rarity < 3 || skilldata(id).rarity > 5);
 
 function assertIsSkill(sid: string): asserts sid is keyof typeof skills {
 	console.assert(skilldata(sid) != null);
